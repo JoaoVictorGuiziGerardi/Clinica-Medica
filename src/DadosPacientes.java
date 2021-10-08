@@ -3,18 +3,18 @@ import java.util.ArrayList;
 public class DadosPacientes{
 		private ArrayList<Pacientes> vetPac = new ArrayList<Pacientes>();
 		public void cadastrar(Pacientes c) {
-		this.vetPac.add(c); //ADICIONA O PACIENTE NO ARRAY
+		this.vetPac.add(c);
 		System.out.println("Total de pacientes: ");
 		System.out.println(this.vetPac.size());
 		}
 		public void listar(){
 		for (Pacientes objeto: this.vetPac) {
-		objeto.mostrarDados();
+		//objeto.mostrarDados();
 		//método mostrarDados();
 		}
 		}
-		//este método retorna o objeto Paciente caso encontrado, ou null,
-		public Pacientes buscar(String cpf) {//pode-se usar também int
+	
+		public Pacientes buscar(String cpf) {
 		Pacientes c = null;
 		for ( Pacientes objeto: this.vetPac) {
 		if (objeto.getCpf().equals(cpf)) {
@@ -24,7 +24,7 @@ public class DadosPacientes{
 		}
 		return c;
 		}
-		//este método usa o método buscar já implementado
+		
 		public boolean excluir(String cpf){
 		Pacientes c = this.buscar(cpf);
 		if (c != null) {
