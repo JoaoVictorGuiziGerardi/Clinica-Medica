@@ -52,21 +52,24 @@ public class Pessoa {
 	}
 	
 	public String getEst_civil() {
-		switch (est_civil) {
+		switch(est_civil) {
 		case 0: return "Solteiro(a)";
 		case 1: return "Casado(a)";
 		case 2: return "Divorciado(a)";
 		default: return null;
 		}
+		
 	}
 
 	public void setEst_civil(String est_civil) {
+		
 		if(est_civil.equalsIgnoreCase("solteiro") || est_civil.equalsIgnoreCase("solteira"))
 			this.est_civil = 0;
 		if(est_civil.equalsIgnoreCase("casado") || est_civil.equalsIgnoreCase("casada"))
 			this.est_civil = 1;
 		if(est_civil.equalsIgnoreCase("divorciado") || est_civil.equalsIgnoreCase("divorciada"))
-			this.est_civil = 2;	
+			this.est_civil = 2;
+		
 	}
 	
 	public Endereco getEndereco() {

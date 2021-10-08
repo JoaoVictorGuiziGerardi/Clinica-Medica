@@ -68,7 +68,7 @@ public class OutrosFuncionarios extends Funcionario {
 	}
 
 	public static void setConsultas_realizadas_mes(int num_consultas_mes) {
-		if (num_consultas_mes >= 0)
+		if (num_consultas_mes > 0)
 			consultas_realizadas_mes = num_consultas_mes;
 	}
 

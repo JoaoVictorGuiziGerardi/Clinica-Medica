@@ -22,6 +22,7 @@ public class Medico extends Funcionario {
 	public Medico() {}
 
 	public double calcularSalario() {
+		
 		return super.getSalario_base() + somaConsulta;
 	}
 
@@ -56,6 +57,7 @@ public class Medico extends Funcionario {
 	
 	public void setConsultas_mes(List<Consulta> consultas_mes) {
 		this.consultas_mes = consultas_mes;
+		
 	}
 
 	public List<Consulta> getConsultas_mes() {
@@ -67,11 +69,11 @@ public class Medico extends Funcionario {
 	}
 	
 	public void zeraSomaConsulta() {
-		somaConsulta = 0;
+		somaConsulta=0;
 	}
 	
 	public void zeraConsultas() {
-		this.consultas_mes.clear();
+		this.consultas_mes.removeAll(null);
 	}
 
 }
