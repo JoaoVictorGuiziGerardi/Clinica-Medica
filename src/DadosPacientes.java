@@ -35,5 +35,12 @@ public class DadosPacientes{
 		return false;
 		}
 		}
+		
+		public static void salvar(ArrayList<Pacientes> a) {
+			boolean r= Persist.gravar(a,"D:\\pacientes.dat");
+			if(r == true)
+				System.out.println("Pacientes salvos com sucesso");
+		}
+		
 		}
 

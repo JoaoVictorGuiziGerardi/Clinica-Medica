@@ -35,4 +35,10 @@ public class DadosPessoas {
 	return false;
 	}
 	}
+	
+	public static void salvar(ArrayList<Pessoa> a) {
+		boolean r= Persist.gravar(a,"D:\\pessoas.dat");
+		if(r == true)
+			System.out.println("Pessoas salvas com sucesso");
+	}
 }

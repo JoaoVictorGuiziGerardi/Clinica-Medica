@@ -35,4 +35,11 @@ public class DadosPlanoSaude {
 	return false;
 	}
 	}
+	
+	public static void salvar(ArrayList<PlanoSaude> a) {
+		boolean r= Persist.gravar(a,"D:\\planosaude.dat");
+		if(r == true)
+			System.out.println("Planos de saude salvos com sucesso");
+	}
+	
 }

@@ -35,4 +35,11 @@ public class DadosFuncionario {
 	return false;
 	}
 	}
+	
+	public static void salvar(ArrayList<Funcionario> a) {
+		boolean r= Persist.gravar(a,"D:\\funcionarios.dat");
+		if(r == true)
+			System.out.println("Funcionários salvos com sucesso");
+	}
+	
 }
