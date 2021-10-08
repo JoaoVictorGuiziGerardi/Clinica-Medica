@@ -69,11 +69,11 @@ public class Medico extends Funcionario {
 	}
 	
 	public void zeraSomaConsulta() {
-		somaConsulta=0;
+		somaConsulta = 0;
 	}
 	
 	public void zeraConsultas() {
-		this.consultas_mes.removeAll(null);
+		this.consultas_mes.clear();
 	}
 
 }
