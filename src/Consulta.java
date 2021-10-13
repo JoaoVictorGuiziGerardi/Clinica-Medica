@@ -9,23 +9,12 @@ public class Consulta {
 	private List <Exame> exames;
 	
 	public Consulta(String data, String horario, String medicamentos_paciente, double valor_consulta,
-			PacientesSemPlano paciente, Medico medico, OutrosFuncionarios funcionario_registrou) {
+			Pacientes paciente, Medico medico, OutrosFuncionarios funcionario_registrou) {
 		setData(data);
 		setHorario(horario);
 		setMedicamentos_paciente(medicamentos_paciente);
 		setPaciente(paciente);
 		setValor_consulta(valor_consulta);
-		setMedico(medico);
-		setFuncionario_registrou(funcionario_registrou);
-	}
-	
-	public Consulta(String data, String horario, String medicamentos_paciente, double valor_consulta,
-			PacientesComPlano paciente, Medico medico, OutrosFuncionarios funcionario_registrou) {
-		setData(data);
-		setHorario(horario);
-		setMedicamentos_paciente(medicamentos_paciente);
-		setPaciente(paciente);
-		setValor_consulta_inicial(valor_consulta);
 		setMedico(medico);
 		setFuncionario_registrou(funcionario_registrou);
 	}
@@ -49,7 +38,7 @@ public class Consulta {
 		// Dados de Medico
 		getMedico().realizaConsulta(this);
 		
-		// Dados de Outros Funcion·rios
+		// Dados de Outros Funcion√°rios
 		getFuncionario_registrou().realizaConsulta();
 	}
 
@@ -90,36 +79,12 @@ public class Consulta {
 	}
 
 	public double getValor_consulta() {
-		double valor_consulta;
-		
-		if (paciente instanceof PacientesComPlano) {
-			// Pacientes com Plano tem 75% de desconto
-			valor_consulta = (this.valor_consulta / 4);
-			setValor_consulta( valor_consulta ); 
-		}
-		else if (paciente instanceof PacientesSemPlano){
-			
-			if (((PacientesSemPlano) paciente).isPossui_desconto() == true) {
-				
-				double desconto = ((PacientesSemPlano) paciente).getValor_desconto();
-				
-				valor_consulta = (this.valor_consulta - desconto);
-				setValor_consulta( valor_consulta );
-			}			
-		}
-		
-		valor_consulta = this.valor_consulta; // Se n„o passar em nenhum if
-		return valor_consulta;
+		return this.valor_consulta;
 	}
 
-	private void setValor_consulta_inicial(double valor_consulta) {
-		if (valor_consulta >= 0)
-			this.valor_consulta = valor_consulta;
-	}
-	
-	public void setValor_consulta(double valor_consulta) {
-		if (valor_consulta >= 0)
-			this.valor_consulta = valor_consulta;
+	private void setValor_consulta(double valor_consulta) {
+		if (valor_consulta > 0)
+			this.valor_consulta = paciente.valor_consulta(getMedico(), getValor_consulta()); // Aplica poss√≠veis descontos
 	}
 	
 	public double getValor_exames() {
