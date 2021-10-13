@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class DadosExames {
+public class DadosExames implements Dados{
 	private ArrayList<Exame> vetExam = new ArrayList<Exame>();
 	public void cadastrar(Exame c) {
 	this.vetExam.add(c);
@@ -36,7 +36,7 @@ public class DadosExames {
 	}
 	}
 	
-	public static void salvar(ArrayList<Exame> a) {
+	public  void salvar(ArrayList<Exame> a) {
 		boolean r= Persist.gravar(a,"D:\\exames.dat");
 		if(r == true)
 			System.out.println("Exames salvos com sucesso");

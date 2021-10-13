@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class DadosFuncionario {
+public class DadosFuncionario implements Dados {
 	private ArrayList<Funcionario> vetFun = new ArrayList<Funcionario>();
 	public void cadastrar(Funcionario c) {
 	this.vetFun.add(c);

@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class DadosConsultas {
+public class DadosConsultas implements Dados{
 	private ArrayList<Consulta> vetCon = new ArrayList<Consulta>();
 	public void cadastrar(Consulta c) {
 	this.vetCon.add(c);
@@ -13,10 +13,10 @@ public class DadosConsultas {
 	}
 	}
 
-	/*public Consulta buscar(String ?) {
+	public Consulta buscar(String cpf) {
 	Consulta c = null;
 	for ( Consulta objeto: this.vetCon) {
-	if (objeto.getCon().equals(?)) {
+	if (objeto.getPaciente().getCpf().equals(cpf)) {
 	c = objeto;
 	break;
 	}
@@ -24,8 +24,8 @@ public class DadosConsultas {
 	return c;
 	}
 	
-	public boolean excluir(String ?){
-	Consulta c = this.buscar(?);
+	public boolean excluir(String cpf){
+	Consulta c = this.buscar(cpf);
 	if (c != null) {
 	this.vetCon.remove(c);
 	return true;
@@ -34,7 +34,7 @@ public class DadosConsultas {
 	return false;
 	}
 	}
-	*/
+	
 	
 	public static void salvar(ArrayList<Consulta> a) {
 		boolean r= Persist.gravar(a,"D:\\consultas.dat");

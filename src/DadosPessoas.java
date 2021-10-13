@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class DadosPessoas {
+public class DadosPessoas implements Dados{
 	private ArrayList<Pessoa> vetPes = new ArrayList<Pessoa>();
 	public void cadastrar(Pessoa c) {
 	this.vetPes.add(c);
