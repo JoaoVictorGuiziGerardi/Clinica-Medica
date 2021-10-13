@@ -21,6 +21,13 @@ public abstract class Funcionario extends Pessoa {
 	public Funcionario() {}
 	
 	public abstract double calcularSalario();
+	
+	 public String mostrarDados(){
+		   return "\nData de admissão: " + getData_admissao()
+		   + "\nNumero da carteira:" + getNro_carteira_trabalho()
+		   + "\nSalario base:" + getSalario_base()
+ 		   + "\nUsuario:" + getUsuario();
+}
 
 	public String getData_admissao() {
 		return data_admissao;

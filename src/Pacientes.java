@@ -12,6 +12,14 @@ public abstract class Pacientes extends Pessoa {
 	
 	public abstract double valor_consulta(Medico medico, double valor_total);
 	
+	 public String mostrarDados(){
+		   return super.mostrarDados()
+		   + "\nData de nascimento: " + getData_nasc()
+		   + "\nData de cadastro:" + getData_cadastro()
+		   + "\nData da ultima consulta:" + getData_ult_consulta();
+ 		  
+}
+	
 	public String getData_nasc() {
 		return data_nasc;
 	}

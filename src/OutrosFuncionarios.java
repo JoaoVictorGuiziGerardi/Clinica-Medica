@@ -26,6 +26,13 @@ public class OutrosFuncionarios extends Funcionario {
 		this.cargo = cargo;
 	}
 	
+	 public String mostrarDados(){
+		   return super.mostrarDados()
+         + "\nCargo: " + getCargo()
+		 + "\nLimite de Consultas do mês:" + getLimite_consultas_mes()
+		 + "\n Consultas realizadas no mês:" + getConsultas_realizadas_mes();
+}
+	
 	public void adicionaConsulta(Medico medico, Consulta consulta, String data, String horario) {
 		consulta.setFuncionario_registrou(this);
 		consulta.setData(data);

@@ -8,6 +8,11 @@ public class PlanoSaude {
 		setCnpj(cnpj);
 		setEndereco(endereco);
 	}
+	
+	 public String mostrarDados(){
+		   return "\nNome: " + getNome()
+		   + "\nCNPJ:" + getCnpj();
+}
 
 	public String getNome() {
 		return nome;

@@ -20,6 +20,12 @@ public class Medico extends Funcionario {
 	}
 	
 	public Medico() {}
+	
+	 public String mostrarDados(){
+		   return super.mostrarDados()
+           +"\nCRM: " + getCrm()
+		   + "\nEspecialidades atendidas:" + getEspecialidades_atendidas();
+}
 
 	public double calcularSalario() {
 		

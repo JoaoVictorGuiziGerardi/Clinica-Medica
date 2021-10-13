@@ -7,6 +7,13 @@ public class Exame {
 		setNome(nome);
 		setPreco(preco);
 	}
+	
+	
+	 public String mostrarDados(){
+		   return "\nNome: " + getNome()
+		   + "\nResultado:" + getResultado()
+		   + "\nPreço:" + getPreco();
+}
 
 	public String getNome() {
 		return nome;

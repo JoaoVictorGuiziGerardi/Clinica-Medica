@@ -42,6 +42,22 @@ public class Consulta {
 		getFuncionario_registrou().realizaConsulta();
 	}
 
+	
+	 public String mostrarDados(){
+	       return "Data:" + this.data
+	    		   + "\nHorario: " + getHorario()
+	    		   + "\nMedicamentos do paciente:" + getMedicamentos_paciente()
+	    		   + "\nReceita:" + getReceita()
+	       		   + "\nValor da Consulta:" + getValor_consulta()
+	       		   + "\nValor dos exames:" + getValor_exames()
+	       		   + "\nPaciente:" + getPaciente().getNome()
+	       		   + "\nMedico" + getMedico().getNome()
+	       		   + "\nFuncionario que registrou:" + getFuncionario_registrou().getNome();		
+	   }
+	
+	
+	
+	
 	public String getData() {
 		return data;
 	}

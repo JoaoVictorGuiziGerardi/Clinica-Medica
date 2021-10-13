@@ -20,6 +20,14 @@ public class PacientesComPlano extends Pacientes {
 		return valor_total;
 	}
 	
+	 public String mostrarDados(){
+		   return super.mostrarDados()
+				   +"\nPlano: " + getPlano().mostrarDados()
+				   + "\nNumero da Carteirinha:" + getNro_carteirinha()
+				   + "\n Data de ingresso no plano:" + getData_ingresso_plano()
+		   		   + "\n Periodo de carencia:" + getPeriodo_carencia();
+}
+	
 	public PlanoSaude getPlano() {
 		return plano;
 	}

@@ -11,6 +11,15 @@ public class Endereco {
 		setCidade(cidade);
 	}
 
+	 public String mostrarDados(){
+	    		   return "\nRua: " + getRua()
+	    		   + "\nNumero:" + getNro()
+	    		   + "\nComplemento:" + getComplemento()
+	       		   + "\nBairro:" + getBairro()
+	       		   + "\nCEP:" + getCep()
+	       		   + "\nCidade:" + getCidade();
+	   }
+	
 	public String getRua() {
 		return rua;
 	}

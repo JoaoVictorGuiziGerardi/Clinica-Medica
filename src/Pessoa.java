@@ -18,6 +18,16 @@ public class Pessoa {
 	
 	public Pessoa() {}
 	
+	 public String mostrarDados(){
+		   return "\nNome: " + getNome()
+		   + "\nCPF:" + getCpf()
+		   + "\nRG:" + getRg()
+ 		   + "\nSexo:" + getSexo()
+ 		   + getEndereco().mostrarDados()
+ 		   + "\nEstado Civil:" + getEst_civil();
+}
+	
+	
 	public String getNome() {
 		return nome;
 	}

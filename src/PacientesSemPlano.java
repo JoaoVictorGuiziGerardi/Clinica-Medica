@@ -19,6 +19,12 @@ public class PacientesSemPlano extends Pacientes {
 	public boolean isPossui_desconto() {
 		return possui_desconto;
 	}
+	
+	public String mostrarDados(){
+		   return super.mostrarDados()
+				   +"\nValor de desconto: " + getValor_desconto()
+				   + "\nValor pago na ultima consulta:" + getValor_pago_ultima_consulta();
+}
 
 	public void setPossui_desconto(boolean possui_desconto) {
 		
