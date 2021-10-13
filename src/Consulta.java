@@ -58,6 +58,7 @@ public class Consulta {
 	}
 
 	public void setData(String data) {
+		if (data.length() > 0)
 		this.data = data;
 	}
 
@@ -66,6 +67,7 @@ public class Consulta {
 	}
 
 	public void setHorario(String horario) {
+		if (horario.length() > 0)
 		this.horario = horario;
 	}
 
@@ -74,6 +76,7 @@ public class Consulta {
 	}
 
 	public void setMedicamentos_paciente(String medicamentos_paciente) {
+		if (medicamentos_paciente.length() > 0)
 		this.medicamentos_paciente = medicamentos_paciente;
 	}
 
@@ -82,6 +85,7 @@ public class Consulta {
 	}
 
 	public void setReceita(String receita) {
+		if (receita.length() > 0)
 		this.receita = receita;
 	}
 
@@ -109,12 +113,12 @@ public class Consulta {
 	}
 
 	private void setValor_consulta_inicial(double valor_consulta) {
-		if (valor_consulta > 0)
+		if (valor_consulta >= 0)
 			this.valor_consulta = valor_consulta;
 	}
 	
 	public void setValor_consulta(double valor_consulta) {
-		if (valor_consulta > 0)
+		if (valor_consulta >= 0)
 			this.valor_consulta = valor_consulta;
 	}
 	
@@ -130,6 +134,7 @@ public class Consulta {
 	}
 
 	public void setValor_exames(double valor_exames) {
+		if (valor_exames >= 0)
 		this.valor_exames = valor_exames;
 	}
 

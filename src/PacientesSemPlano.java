@@ -14,6 +14,7 @@ public class PacientesSemPlano extends Pacientes {
 	}
 
 	public void setPossui_desconto(boolean possui_desconto) {
+		
 		this.possui_desconto = possui_desconto;
 	}
 

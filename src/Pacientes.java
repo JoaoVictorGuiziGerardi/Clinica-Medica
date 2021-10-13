@@ -15,6 +15,7 @@ public abstract class Pacientes extends Pessoa {
 	}
 
 	public void setData_nasc(String data_nasc) {
+		if (data_nasc.length() > 0)
 		this.data_nasc = data_nasc;
 	}
 
@@ -23,6 +24,7 @@ public abstract class Pacientes extends Pessoa {
 	}
 
 	public void setData_ult_consulta(String data_ult_consulta) {
+		if (data_ult_consulta.length() > 0)
 		this.data_ult_consulta = data_ult_consulta;
 	}
 
@@ -31,6 +33,7 @@ public abstract class Pacientes extends Pessoa {
 	}
 	
 	public void setData_cadastro(String data_cadastro) {
+		if (data_cadastro.length() > 0)
 		this.data_cadastro = data_cadastro;
 	}	
 

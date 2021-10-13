@@ -31,6 +31,7 @@ public class Medico extends Funcionario {
 	}
 
 	public void setCrm(String crm) {
+		if (crm.length() > 0)
 		this.crm = crm;
 	}
 
@@ -39,6 +40,7 @@ public class Medico extends Funcionario {
 	}
 
 	public void setEspecialidades_atendidas(String especialidades_atendidas) {
+		if (especialidades_atendidas.length() > 0)
 		this.especialidades_atendidas = especialidades_atendidas;
 	}
 

@@ -16,6 +16,7 @@ public class Endereco {
 	}
 
 	public void setRua(String rua) {
+		if (rua.length() > 0)
 		this.rua = rua;
 	}
 
@@ -24,6 +25,7 @@ public class Endereco {
 	}
 
 	public void setNro(String nro) {
+		if (nro.length() > 0)
 		this.nro = nro;
 	}
 
@@ -32,6 +34,7 @@ public class Endereco {
 	}
 
 	public void setComplemento(String complemento) {
+		if (complemento.length() > 0)
 		this.complemento = complemento;
 	}
 
@@ -40,6 +43,7 @@ public class Endereco {
 	}
 
 	public void setBairro(String bairro) {
+		if (bairro.length() > 0)
 		this.bairro = bairro;
 	}
 
@@ -48,6 +52,7 @@ public class Endereco {
 	}
 
 	public void setCep(String cep) {
+		if (cep.length() > 0)
 		this.cep = cep;
 	}
 
@@ -56,6 +61,7 @@ public class Endereco {
 	}
 
 	public void setCidade(String cidade) {
+		if (cidade.length() > 0)
 		this.cidade = cidade;
 	}
 

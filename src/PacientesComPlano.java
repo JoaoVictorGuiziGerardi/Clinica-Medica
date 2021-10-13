@@ -26,6 +26,7 @@ public class PacientesComPlano extends Pacientes {
 	}
 
 	public void setNro_carteirinha(String nro_carteirinha) {
+		if (nro_carteirinha.length() > 0)
 		this.nro_carteirinha = nro_carteirinha;
 	}
 
@@ -34,6 +35,7 @@ public class PacientesComPlano extends Pacientes {
 	}
 
 	public void setData_ingresso_plano(String data_ingresso_plano) {
+		if (data_ingresso_plano.length() > 0)
 		this.data_ingresso_plano = data_ingresso_plano;
 	}
 

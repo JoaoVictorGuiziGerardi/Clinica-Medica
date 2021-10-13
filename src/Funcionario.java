@@ -35,6 +35,7 @@ public abstract class Funcionario extends Pessoa {
 	}
 
 	public void setNro_carteira_trabalho(String nro_carteira_trabalho) {
+		if (nro_carteira_trabalho.length() > 0)
 		this.nro_carteira_trabalho = nro_carteira_trabalho;
 	}
 
@@ -52,6 +53,7 @@ public abstract class Funcionario extends Pessoa {
 	}
 
 	public void setUsuario(String usuario) {
+		if (usuario.length() > 0)
 		this.usuario = usuario;
 	}
 	

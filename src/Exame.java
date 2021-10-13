@@ -13,6 +13,7 @@ public class Exame {
 	}
 
 	public void setNome(String nome) {
+		if (nome.length() > 0)
 		this.nome = nome;
 	}
 
@@ -21,6 +22,7 @@ public class Exame {
 	}
 
 	public void setResultado(String resultado) {
+		if (resultado.length() > 0)
 		this.resultado = resultado;
 	}
 
@@ -29,6 +31,7 @@ public class Exame {
 	}
 
 	public void setPreco(double preco) {
+		if (preco >= 0)
 		this.preco = preco;
 	}
 

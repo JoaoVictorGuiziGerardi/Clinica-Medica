@@ -14,6 +14,7 @@ public class PlanoSaude {
 	}
 
 	public void setNome(String nome) {
+		if (nome.length() > 0)
 		this.nome = nome;
 	}
 
@@ -22,6 +23,7 @@ public class PlanoSaude {
 	}
 
 	public void setCnpj(String cnpj) {
+		if (cnpj.length() > 0)
 		this.cnpj = cnpj;
 	}
 	

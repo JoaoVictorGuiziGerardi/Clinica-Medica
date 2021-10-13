@@ -40,6 +40,7 @@ public class Pessoa {
 	}
 
 	public void setRg(String rg) {
+		if (rg.length() > 0)
 		this.rg = rg;
 	}
 	
@@ -48,6 +49,7 @@ public class Pessoa {
 	}
 
 	public void setSexo(String sexo) {
+		if (sexo.length() > 0)
 		this.sexo = sexo;
 	}
 	
