@@ -13,6 +13,13 @@ public class PacientesComPlano extends Pacientes {
 		setPeriodo_carencia(periodo_carencia);
 	}
 	
+	public double valor_consulta(Medico medico, double valor_total) {
+		if (medico.getPlanos_atendidos().contains(getPlano()))
+			valor_total = valor_total * 0.75; // Pacientes com Plano tem 75% de desconto
+		
+		return valor_total;
+	}
+	
 	public PlanoSaude getPlano() {
 		return plano;
 	}
