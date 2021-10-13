@@ -10,6 +10,8 @@ public abstract class Pacientes extends Pessoa {
 		setData_cadastro(data_cadastro);
 	}
 	
+	public abstract double valor_consulta(Medico medico, double valor_total);
+	
 	public String getData_nasc() {
 		return data_nasc;
 	}
