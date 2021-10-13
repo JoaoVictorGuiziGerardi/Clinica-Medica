@@ -8,6 +8,13 @@ public class PacientesSemPlano extends Pacientes {
 		super(nome, cpf, rg, sexo, est_civil, data_nasc, data_cadastro, endereco);
 		setPossui_desconto(possui_desconto);
 	}
+	
+	public double valor_consulta(Medico medico, double valor_total) {
+		if (isPossui_desconto())
+			valor_total -= getValor_desconto();
+		
+		return valor_total;
+	}
 
 	public boolean isPossui_desconto() {
 		return possui_desconto;
