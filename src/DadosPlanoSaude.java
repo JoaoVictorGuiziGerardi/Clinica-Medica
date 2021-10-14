@@ -9,7 +9,7 @@ public class DadosPlanoSaude implements Dados{
 	}
 	public void listar(){
 	for (PlanoSaude objeto: this.vetPS) {
-	objeto.mostrarDados();
+		System.out.println(objeto.mostrarDados());
 	//método mostrarDados();
 	}
 	}

@@ -8,8 +8,8 @@ public class DadosConsultas implements Dados{
 	}
 	public void listar(){
 	for (Consulta objeto: this.vetCon) {
-	objeto.mostrarDados();
-	//método mostrarDados();
+		System.out.println(objeto.mostrarDados());
+	//mï¿½todo mostrarDados();
 	}
 	}
 

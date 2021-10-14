@@ -9,7 +9,7 @@ public class DadosFuncionario implements Dados {
 	}
 	public void listar(){
 	for (Funcionario objeto: this.vetFun) {
-	objeto.mostrarDados();
+		System.out.println(objeto.mostrarDados());
 	//método mostrarDados();
 	}
 	}

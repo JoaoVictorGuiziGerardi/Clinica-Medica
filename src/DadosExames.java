@@ -9,7 +9,7 @@ public class DadosExames implements Dados{
 	}
 	public void listar(){
 	for (Exame objeto: this.vetExam) {
-	   objeto.mostrarDados();
+		System.out.println(objeto.mostrarDados());
 	//método mostrarDados();
 	}
 	}

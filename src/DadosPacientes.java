@@ -9,7 +9,7 @@ public class DadosPacientes implements Dados{
 		}
 		public void listar(){
 		for (Pacientes objeto: this.vetPac) {
-		objeto.mostrarDados();
+			System.out.println(objeto.mostrarDados());
 		//método mostrarDados();
 		}
 		}
